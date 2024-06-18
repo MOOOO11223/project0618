@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}Student Dashboard{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Download</title>
+</head>
+
+<body>
+    <div class="head">
+        <a href="student_a.php"><span class="head-a">Download Page</span></a>
+        <span class="head-b" id="showbox"></span>
+
+        <a href="{{ url_for('logout') }}">
+            <div class="head-dd">Logout</div>
+        </a>
+    </div>
+
+    <form id="downloadForm">
+        <label for="fileId">Enter File ID:</label>
+        <input type="number" id="fileId" name="fileId" required>
+        <button type="submit">Download</button>
+    </form>
+
+    <script>
+        document.getElementById('downloadForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let fileId = document.getElementById('fileId').value;
+
+            fetch(`/download-file/${fileId}`, {
+                method: 'GET'
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('File not found');
+                    }
+                    return response.blob();
+                })
+                .then(blob => {
+                    const url = window.URL.createObjectURL(new Blob([blob]));
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = `file_${fileId}.pdf`; // 可以根據需要更改檔案名稱
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Download failed');
+                });
+        });
+    </script>
+</body>
+
+</html>
+
+{% endblock %}

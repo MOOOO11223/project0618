@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="head">
+        <a href="student_a.php"><span class="head-a">student Page</span></a>
+        <span class="head-b" id="showbox"></span>
+
+        <a href="{{ url_for('logout') }}">
+            <div class="head-dd">Logout</div>
+        </a>
+    </div>
+
+    <div class="login-container">
+        <h2>student</h2>
+        <form method="post" action="{{ url_for('update') }}">
+            <button type="submit">upload</button>
+        </form>
+        <br>
+        <form method="post" action="{{ url_for('download_file') }}">
+            <button type="submit">download</button>
+        </form>
+
+
+        <br>
+        <h2>排名結果</h2>
+        <div id="error" class="error-message">123</div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

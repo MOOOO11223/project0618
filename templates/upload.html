@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>file uploade page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="head">
+        <a href="student_a.php"><span class="head-a">file uploade page</span></a>
+        <span class="head-b" id="showbox"></span>
+
+        <a href="{{ url_for('logout') }}">
+            <div class="head-dd">Logout</div>
+        </a>
+    </div>
+
+    <div class="login-container">
+        <h2>選擇文件並上傳</h2>
+        <form action="/uploader" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="file">
+            <button type="submit">上傳</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+/* styles.css */
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f0f0f0;
+	margin: 0;
+}
+
+.login-container {
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 300px;
+	text-align: center;
+}
+
+h2 {
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	margin: 10px 0 5px;
+}
+
+input {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+button {
+	width: 100%;
+	padding: 10px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #45a049;
+}
+
+.error-message {
+	color: red;
+	margin-top: 10px;
+}
+
+html,
+body {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #4a4a4a;
+	font-family: Comic Sans MS;
+}
+
+.head {
+	position: absolute;
+	top: 0px;
+	height: 45px;
+	width: 100%;
+	background: #2d2d2d;
+}
+
+.head-a {
+	position: absolute;
+	left: 0%;
+	font-size: 30px;
+	color: #a8bc1b;
+}
+
+.head-b {
+	position: absolute;
+	top: 1%;
+	left: 40%;
+	font-size: 24px;
+	color: #ffffff;
+}
+
+.head-c {
+	position: absolute;
+	top: 1%;
+	right: 23%;
+	font-size: 20px;
+	color: #ffffff;
+}
+
+.head-dd {
+	position: absolute;
+	top: 6.5px;
+	right: 8px;
+	height: 32px;
+	width: 85px;
+	background: #21ba45;
+	border-radius: 5px;
+	color: #e7f8eb;
+	font-size: 22px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.table {
+	position: relative;
+	width: 40%;
+	background: #1b1c1d;
+	border-radius: 5px;
+	margin: 50px 0 0 30%;
+}
+
+.table-a {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-size: 32px;
+	color: #d9e778;
+	margin: 20px 0 0 0;
+}
+
+.table-b {
+	position: absolute;
+	font-size: 24px;
+	color: #f3f3f3;
+	margin: 90px 0 0 10%;
+}
+
+ul {
+	position: absolute;
+	color: #aaaaaa;
+	font-size: 22px;
+	margin: 120px 0 0 7%;
+}
+
+li {
+	margin: 30px 0 0 0;
+}
+
+.table-file {
+	position: absolute;
+	height: 32px;
+	width: 120px;
+	background: #761dc8;
+	border-radius: 5px;
+	color: #e7f8eb;
+	font-size: 22px;
+	text-align: center;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+.table2 {
+	position: absolute;
+	height: 50px;
+	width: 100%;
+	top: 98%;
+	background: #2d2d2d;
+	border-radius: 1px;
+}
+
+.table-submit {
+	position: absolute;
+	height: 32px;
+	width: 120px;
+	margin: 9px 0 0 77%;
+	background: #21b8ff;
+	border-radius: 5px;
+	color: #e7f8eb;
+	font-size: 22px;
+	text-align: center;
+	letter-spacing: 1px;
+	cursor: pointer;
+}

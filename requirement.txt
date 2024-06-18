@@ -1,0 +1,9 @@
+flask
+requests
+joblib
+flask_migrate
+werkzeug
+flask_sqlalchemy
+scikit-learn
+psycopg2
+dbconn
